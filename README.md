@@ -1,16 +1,19 @@
 # navigation
 
-A new Flutter project.
+A simple Flutter project on navigation.
 
 ## Getting Started
+this application is just a barebore app with the intention on learning navigation in flutter. 
 
-This project is a starting point for a Flutter application.
+the first screen or home you could navigate to the second or third screen using the elevated button in the middle of the 
+screen, or you could use the drawer by tapping the hamburger on top left and tap the list.
 
-A few resources to get you started if this is your first Flutter project:
+on the second screen you could navigate to the first screen by using the elevated button in the middle, or you could use
+the drawer to navigate to the first or third screen.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+the third screen is almost the same as the second screen with the exception of the drawer could only navigate you to the
+first and second screen.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## On The Technical side
+
+[Presentation](https://www.canva.com/design/DAFy6uZc64o/FZUc1WqqPTelTAssKo02mw/edit?utm_content=DAFy6uZc64o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
