@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatelessWidget {
+class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Second Screen')),
+      appBar: AppBar(title: const Text('Third screen')),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -23,18 +23,17 @@ class SecondScreen extends StatelessWidget {
                   Navigator.pushNamed(context, '/');
                 }),
             ListTile(
-              selected: true,
-              title: const Text('Second Screen'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
                 selected: false,
+                title: const Text('Second Screen'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/second');
+                }),
+            ListTile(
+                selected: true,
                 title: const Text('Third Screen'),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.pushNamed(context, '/third');
                 }),
           ],
         ),
