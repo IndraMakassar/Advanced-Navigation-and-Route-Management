@@ -14,6 +14,3 @@ the drawer to navigate to the first or third screen.
 the third screen is almost the same as the second screen with the exception of the drawer could only navigate you to the
 first and second screen.
 
-## On The Technical side
-
-[Presentation](https://www.canva.com/design/DAFy6uZc64o/FZUc1WqqPTelTAssKo02mw/edit?utm_content=DAFy6uZc64o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
