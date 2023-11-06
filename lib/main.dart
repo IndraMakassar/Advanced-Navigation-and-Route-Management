@@ -3,9 +3,11 @@ import 'package:navigation/bottom_nav.dart';
 import 'package:navigation/second_screen.dart';
 import 'package:navigation/third_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,9 +17,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => NavigationMenu(),
-        '/second': (context) => SecondScreen(),
-        '/third': (context) => ThirdScreen(),
+        '/': (context) => const NavigationMenu(),
+        '/second': (context) => const SecondScreen(),
+        '/third': (context) => const ThirdScreen(),
       },
     );
   }

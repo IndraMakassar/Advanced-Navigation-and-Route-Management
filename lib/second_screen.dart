@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
+  const SecondScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final String data =
-        ModalRoute.of(context)?.settings.arguments as String ?? 'first';
+        ModalRoute.of(context)?.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Second Screen'),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pushNamed(context, '/', arguments: '/second');
           },

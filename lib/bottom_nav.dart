@@ -4,6 +4,8 @@ import 'package:navigation/generate_screen.dart';
 import 'first_screen.dart';
 
 class NavigationMenu extends StatefulWidget {
+  const NavigationMenu({super.key});
+
   @override
   State<NavigationMenu> createState() => _NavigationMenuState();
 }

@@ -8,14 +8,15 @@ class GenerateScreen extends StatefulWidget{
 }
 
 class _GenerateScreenState extends State<GenerateScreen> {
-  List<Widget> screens = [PageWidget(1)]; // Initial screen
+  List<Widget> screens = [const PageWidget(1)]; // Initial screen
   int screenCount = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page Navigation App'),
+        title: const Text('Page Navigation App'),
+        leading: null,
       ),
       body: ListView.builder(
         itemCount: screens.length,
@@ -42,9 +43,9 @@ class _GenerateScreenState extends State<GenerateScreen> {
                 screens.add(PageWidget(screenCount));
               });
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           FloatingActionButton(
             onPressed: () {
               if (screenCount > 1) {
@@ -54,7 +55,7 @@ class _GenerateScreenState extends State<GenerateScreen> {
                 });
               }
             },
-            child: Icon(Icons.remove),
+            child: const Icon(Icons.remove),
           ),
         ],
       ),
@@ -65,7 +66,7 @@ class _GenerateScreenState extends State<GenerateScreen> {
 class PageWidget extends StatelessWidget {
   final int screenIndex;
 
-  PageWidget(this.screenIndex);
+  const PageWidget(this.screenIndex, {super.key});
 
   @override
   Widget build(BuildContext context) {

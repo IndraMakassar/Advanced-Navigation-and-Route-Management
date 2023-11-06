@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ThirdScreen extends StatelessWidget {
+  const ThirdScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final String data = ModalRoute.of(context)?.settings.arguments as String ?? 'first';
+    final String data = ModalRoute.of(context)?.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
           title: const Text('Third screen'),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pushNamed(context, '/', arguments: '/third');
           },
