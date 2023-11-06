@@ -3,8 +3,17 @@ import 'package:flutter/material.dart';
 class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final String data = ModalRoute.of(context)?.settings.arguments as String ?? 'first';
     return Scaffold(
-      appBar: AppBar(title: const Text('Third screen')),
+      appBar: AppBar(
+          title: const Text('Third screen'),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushNamed(context, '/', arguments: '/third');
+          },
+        ),
+      ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -20,14 +29,14 @@ class ThirdScreen extends StatelessWidget {
                 title: const Text('First Screen'),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.pushNamed(context, '/');
+                  Navigator.pushNamed(context, '/', arguments: "/second");
                 }),
             ListTile(
                 selected: false,
                 title: const Text('Second Screen'),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.pushNamed(context, '/second');
+                  Navigator.pushNamed(context, '/second', arguments: "/second");
                 }),
             ListTile(
                 selected: true,
@@ -39,14 +48,19 @@ class ThirdScreen extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Return to the first screen.
-            Navigator.pushNamed(context, '/');
-          },
-          child: const Text('Go Back to First Screen'),
-        ),
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(data),
+          ElevatedButton(
+            onPressed: () {
+              // Return to the first screen.
+              Navigator.pushNamed(context, '/', arguments: "/second");
+            },
+            child: const Text('Go Back to First Screen'),
+          ),
+        ],
+      )),
     );
   }
 }
