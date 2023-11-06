@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/bottom_nav.dart';
 import 'package:navigation/second_screen.dart';
 import 'package:navigation/third_screen.dart';
-import 'first_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => FirstScreen(),
+        '/': (context) => NavigationMenu(),
         '/second': (context) => SecondScreen(),
         '/third': (context) => ThirdScreen(),
       },
